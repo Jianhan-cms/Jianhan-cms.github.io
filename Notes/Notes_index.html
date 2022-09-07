@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CMMLab</title>
+<link rel="shortcut icon" href="cityu_logo_block.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../W3CSS/w3.css">
+<link rel="stylesheet" href="../W3CSS/w3-theme-black.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link href="https://fonts.googleapis.com/css?family=Rubik:700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 500px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+
+<body>
+
+<!-- Navbar -->
+<div w3-include-html="navbar.html"></div>
+
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main">
+
+
+
+
+    <div class="w3-main">
+      <div class="w3-row w3-padding-64">
+
+        <!-- First Photo Grid-->
+        <div class="w3-col-padding">
+          <div class="w3-half w3-container w3-margin-bottom">
+              <ul class="w3-ul">
+                <li style="border-top:none solid #ddd">
+                  <span style="color:black;font-family:'Rubik',sans-serif;">Interfaces in crystalline materials</span>
+                  <br>
+                  <ul class="w3-ul">
+                    <li>
+                      <span style="color:black;font-family:'Rubik',sans-serif;">Structure of interfaces</span><br>
+                      <ul class="w3-ul">
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Bicrystallography</span><br>
+                          Note from reading Chapters 1 in <em>Interfaces in Crystalline Materials</em> by A. P. Sutton and R. W. Balluffi.
+                        </li>
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Interface dislocations</span><br>
+                          Note from reading Chapters 2.3-2.7 in <em>Interfaces in Crystalline Materials</em> by A. P. Sutton and R. W. Balluffi.
+                        </li>
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Structural unit model</span><br>
+                          Note from reading Chapter 4.3.1.8 in <em>Interfaces in Crystalline Materials</em> by A. P. Sutton and R. W. Balluffi and the paper <a href="https://www.sciencedirect.com/science/article/pii/S1359645417303798" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"J. Han, V. Vitek and D. J. Srolovitz. The grain-boundary structural unit model redux. Acta Materialia 133, 186 (2017)"</a>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span style="color:black;font-family:'Rubik',sans-serif;">Elasticity of interfaces</span>
+                      <ul class="w3-ul">
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Isotropic elasticity of interfaces</span><br>
+                          Note from reading the paper <a href="https://www.tandfonline.com/doi/abs/10.1080/01418618108236150" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"R. Bonnet. Periodic displacement and stress fields near a phase boundary in the isotropic elasticity theory. Philosophical Magazine A 43, 1165 (1981)"</a>.
+                        </li>
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Anisotropic elasticity of interfaces</span><br>
+                          Note from reading the paper <a href="https://www.sciencedirect.com/science/article/pii/S1359645413003741" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"A. Vattr&eacute; and M. Demkowicz. Determining the Burgers vectors and elastic strain energies of interface dislocation arrays using anisotropic elasticity theory. Acta Materialia 61, 5172 (2013)"</a>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span style="color:black;font-family:'Rubik',sans-serif;">Thermodynamics of interfaces</span>
+                      <ul class="w3-ul">
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Interface free energy</span><br>
+                          Note from reading T. Frolov's PhD thesis <a href="https://www.proquest.com/docview/917413659?pq-origsite=gscholar&fromopenview=true" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"Interface Thermodynamics with Applications to Atomistic Simulations (1981)"</a>.
+                        </li>
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Interface phase transition</span><br>
+                          Note from reading the paper <a href="https://aip.scitation.org/doi/abs/10.1063/1.434402" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"J. W. Cahn. Critical point wetting. The Journal of Chemical Physics 66, 3667 (1977)"</a> and the paper <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.73.024102" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"M. Tang, W. C. Carter and R. M. Cannon. Diffuse interface model for structural transitions of grain boundaries. Physical Review B 73, 024102 (2006)"</a>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span style="color:black;font-family:'Rubik',sans-serif;">Kinetics of interfaces</span>
+                      <ul class="w3-ul">
+                        <li style="border:none">
+                          <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Capillarity vector</span><br>
+                          Note from reading the paper <a href="https://www.sciencedirect.com/science/article/pii/0039602872902683" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"D. W. Hoffman and J. W. Cahn. A vector thermodynamics for anisotropic surfaces - I. Fundamentals and application to plane surface junctions. Surface Science 31, 368 (1972)"</a> and the paper <a href="https://www.sciencedirect.com/science/article/pii/0001616074901345" target="_blank" style="text-decoration:none" class="w3-hover-text-blue">"J. W. Cahn and D. W. Hoffman. A vector thermodynamics for anisotropic surfaces - II. Curved and faceted surfaces. Acta Metallurgica 22, 1205 (1974)"</a>.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="w3-col-padding">
+          <div class="w3-half w3-container w3-margin-bottom">
+              <ul class="w3-ul">
+                <li style="border-top:none solid #ddd">
+                  <span style="color:#C0165F;font-family:'Rubik',sans-serif;">Free energy calculation</span>
+                  <br>
+                  Note mainly from reading <em>Understanding Molecular Simulation: From Algorithms to Applications</em> by D. Frenkel. The content includes: harmonic model, thermodynamic integration, and free energy barrier calculation methods.
+                </li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l1">
+      <p style="font-size: 10px;letter-spacing: 1px">
+        <a href="https://goo.gl/maps/CrzVRvn8Et7eenA46" target="_blank" style="text-decoration:none;"><i class="material-icons" style="font-size:14px;vertical-align:middle">place</i> &nbsp | &nbsp
+        <a href="mailto:jianhan@cityu.edu.hk" target="_blank" style="text-decoration:none;"><i class="fa fa-envelope fa-fw"></i> <span class="w3-hide-small w3-hide-medium">&nbsp | &nbsp</span>
+        <a href="http://www.cityu.edu.hk/mse" target="_blank" class="w3-hide-small w3-hide-medium" style="text-decoration:none;">Materials Science and Engineering</a> <span class="w3-hide-small w3-hide-medium">&nbsp | &nbsp</span>
+        <a href="http://www.cityu.edu.hk" target="_blank" class="w3-hide-small w3-hide-medium" style="text-decoration:none;">City University of Hong Kong</a>
+        <span class="w3-hide-small w3-hide-medium" style="float:right">
+          Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+</div>
+<!-- END MAIN -->
+
+
+<script>
+includeHTML();
+</script>
+
+</body>
+</html>
