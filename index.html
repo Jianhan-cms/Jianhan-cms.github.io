@@ -11,12 +11,43 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link href="https://fonts.googleapis.com/css?family=Rubik:700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 <script type="text/javascript"
   src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 .w3-sidebar {
@@ -30,62 +61,43 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <body>
 
 <!-- Navbar -->
-<div class="w3-top" style="z-index:4">
- <div class="w3-bar w3-theme w3-left-align w3-large" style="letter-spacing:1px;">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#home" class="w3-bar-item w3-button w3-theme-l0">Home</a>
-  <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
-  <a href="#member" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Member</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button">Course <i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button">Mathematics</a>
-        <a href="#" class="w3-bar-item w3-button">Physics</a>
-        <a href="#" class="w3-bar-item w3-button">Solid mechanics</a>
-        <a href="#" class="w3-bar-item w3-button">Materials science</a>
-        <a href="#" class="w3-bar-item w3-button">Computation and simulation</a>
-      </div>
-    </div>
-  <a href="#notes" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Notes</a>
-  <a href="#miscellanea" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Miscellanea</a>
-  <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-purple" title="Search"><i class="fa fa-search"></i></a>-->
-  <div class="w3-right w3-hide-small">
-    <form action="https://google.com/search" target="_blank" type="GET">
-      <input class="w3-bar-item w3-theme w3-hover-white w3-hover-gray" type="search" placeholder="Search ..." name="q" size="8">
-      <!--<input class="w3-bar-item w3-theme" type="submit" value="hi">-->
-      <button class="w3-bar-item w3-theme" type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
- </div>
+<div w3-include-html="navbar.html"></div> 
 
-  <!-- Navbar on small screens -->
+<script>
+includeHTML();
+</script>
+
+<!--
+<div class="w3-top" style="z-index:4">
+  <div class="w3-bar w3-theme w3-left-align w3-large" style="letter-spacing:1px;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+
+    <a href="#home" class="w3-bar-item w3-button w3-theme-l0">Home</a>
+    <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
+    <a href="#member" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Member</a>
+    <a href="#member" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Course</a>
+    <a href="#notes" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Notes</a>
+    <a href="#miscellanea" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Miscellanea</a>
+
+    <div class="w3-right w3-hide-small">
+      <form action="https://google.com/search" target="_blank" type="GET">
+        <input class="w3-bar-item w3-theme w3-hover-white w3-hover-gray" type="search" placeholder="Search ..." name="q" size="8">
+        <button class="w3-bar-item w3-theme" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+</div>-->
+
+  <!-- Navbar on small screens --><!--
   <div id="navDemo" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button">About</a>
     <a href="#research" class="w3-bar-item w3-button">Research</a>
     <a href="#member" class="w3-bar-item w3-button">Member</a>
-    <!--<a href="#" class="w3-bar-item w3-button">Course</a>-->
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">Course <i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button">MATH: Engineering maths</a>
-        <a href="#" class="w3-bar-item w3-button">PHYS: Classical mechanics</a>
-        <a href="#" class="w3-bar-item w3-button">PHYS: Thermodynamics</a>
-        <a href="#" class="w3-bar-item w3-button">PHYS: Statistical field theory</a>
-        <a href="#" class="w3-bar-item w3-button">PHYS: Quantum mechanics</a>
-        <a href="#" class="w3-bar-item w3-button">PHYS: Solid state physics</a>
-        <a href="#" class="w3-bar-item w3-button">MECH: Elasticity I</a>
-        <a href="#" class="w3-bar-item w3-button">MECH: Elasticity II</a>
-        <a href="#" class="w3-bar-item w3-button">MECH: Continuum mechanics</a>
-        <a href="#" class="w3-bar-item w3-button">MECH: Continuum plasticity</a>
-        <a href="#" class="w3-bar-item w3-button">MECH: Fracture mechanics</a>
-        <a href="#" class="w3-bar-item w3-button">MSE: Structure of materials</a>
-        <a href="#" class="w3-bar-item w3-button">MSE: Kinetics of materials</a>
-        <a href="#" class="w3-bar-item w3-button">MSE: Computational materials science</a>
-      </div>
-    </div>
+    <a href="#course" class="w3-bar-item w3-button">Course</a>
+    <a href="#notes" class="w3-bar-item w3-button">Notes</a>
     <a href="#miscellanea" class="w3-bar-item w3-button">Miscellanea</a>
   </div>
 </div>
+-->
+
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5">
