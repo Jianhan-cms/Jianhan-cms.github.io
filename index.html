@@ -61,42 +61,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <body>
 
 <!-- Navbar -->
-<div w3-include-html="navbar.html"></div> 
-
-<script>
-includeHTML();
-</script>
-
-<!--
-<div class="w3-top" style="z-index:4">
-  <div class="w3-bar w3-theme w3-left-align w3-large" style="letter-spacing:1px;">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-
-    <a href="#home" class="w3-bar-item w3-button w3-theme-l0">Home</a>
-    <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
-    <a href="#member" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Member</a>
-    <a href="#member" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Course</a>
-    <a href="#notes" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Notes</a>
-    <a href="#miscellanea" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Miscellanea</a>
-
-    <div class="w3-right w3-hide-small">
-      <form action="https://google.com/search" target="_blank" type="GET">
-        <input class="w3-bar-item w3-theme w3-hover-white w3-hover-gray" type="search" placeholder="Search ..." name="q" size="8">
-        <button class="w3-bar-item w3-theme" type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-</div>-->
-
-  <!-- Navbar on small screens --><!--
-  <div id="navDemo" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium">
-    <a href="#research" class="w3-bar-item w3-button">Research</a>
-    <a href="#member" class="w3-bar-item w3-button">Member</a>
-    <a href="#course" class="w3-bar-item w3-button">Course</a>
-    <a href="#notes" class="w3-bar-item w3-button">Notes</a>
-    <a href="#miscellanea" class="w3-bar-item w3-button">Miscellanea</a>
-  </div>
-</div>
--->
+<div w3-include-html="navbar.html"></div>
 
 
 <!-- Sidebar -->
@@ -116,29 +81,25 @@ includeHTML();
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:500px">
-
   <div class="w3-row w3-padding-64">
-    <!--<div class="w3-container" style="padding-bottom:20px;">
-      <h1 class="w3-text-teal" style="text-align:center; font-size: 40px; letter-spacing: 2px; font-family: 'Rubik',sans-serif;">Computational Materials Science</h1>
-    </div>-->
 
     <!-- First Photo Grid-->
     <div class="w3-row-padding">
       <div class="w3-half w3-container w3-margin-bottom">
         <img src="GB_mobility_tensor.svg" alt="GB_mobility_tensor" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white" style="border-bottom:1px solid #ddd">
-          <p><b>GB mobility tensor</b></p>
+          <p style="color:#C0165F;font-family:'Rubik',sans-serif;">GB mobility tensor</p>
           <p>
-            The intrinsic kinetic properties of GBs should be described by a GB mobility tensor <b>M</b>, rather than a scalar which is always assumed in the classical GB kinetics (Burke & Turnbull, Mullins).
+            The intrinsic kinetic properties of GBs should be described by a GB mobility tensor <b>M</b>, rather than a scalar which is always assumed in the classical GB kinetics (Burke & Turnbull, Mullins). The mobility tensor naturally reflects shear-coupled migration and capillarity-coupled sliding. <a href="/publication/20_The_GB_mobility_tensor.pdf" download style="color:#C0165F;text-decoration:none">[paper]</a>
           </p>
         </div>
       </div>
       <div class="w3-half w3-container w3-margin-bottom">
         <img src="SUM.svg" alt="SUM" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white" style="border-bottom:1px solid #ddd">
-          <p><b>Structural unit model redux</b></p>
+          <p style="color:#C0165F;font-family:'Rubik',sans-serif;">Structural unit model redux</p>
           <p>
-            Structural unit model applies for each evolution (w.r.t. misorientation) of stable/metastable GB structure. GB energy vs. misorientation can be asymptotically approached by including the information of more GBs at different misorientations.
+            Structural unit model applies for each evolution of stable/metastable GB structure w.r.t. misorientation. GB energy vs. misorientation can be asymptotically approached by including the information of more GB states at different misorientations. <a href="/publication/17_The_GB_SUM_redux.pdf" download style="color:#C0165F;text-decoration:none">[paper]</a>
           </p>
         </div>
       </div>
@@ -149,18 +110,18 @@ includeHTML();
       <div class="w3-half w3-container w3-margin-bottom">
         <img src="GB_EOM.svg" alt="GB_EOM" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white" style="border-bottom:1px solid #ddd">
-          <p><b>Continuum equation of motion for GBs</b></p>
+          <p style="color:#C0165F;font-family:'Rubik',sans-serif;">Continuum equation of motion for GBs</p>
           <p>
-              Recent theory, simulations and experiments demonstrate that GB migration is controlled by the motion of discrete line defects or disconnections. We present a continuum equation of motion for GB derived from the underlying discrete disconnection mechanism. The resulting equation of motion naturally exhibits stress-driven GB migration and junction drag.
+              Recent theory, simulations and experiments demonstrate that GB migration is controlled by the motion of discrete line defects or disconnections. We present a continuum equation of motion for GB derived from the underlying discrete disconnection mechanism. The resulting equation of motion naturally exhibits stress-driven GB migration and junction drag. <a href="/publication/17_Equation_of_motion_for_a_GB.pdf" download style="color:#C0165F;text-decoration:none">[paper]</a>
           </p>
         </div>
       </div>
       <div class="w3-half w3-container w3-margin-bottom">
         <img src="HEA.svg" alt="HEA" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white" style="border-bottom:1px solid #ddd">
-          <p><b>The effect of randomness on the strength of high-entropy alloys</b></p>
+          <p style="color:#C0165F;font-family:'Rubik',sans-serif;">Effect of randomness on  strength of high-entropy alloys</p>
           <p>
-              A stochastic Peierls-Nabarro (PN) model is proposed to understand how random site occupancy affects intrinsic strength. The model predicts the intrinsic strength of HEAs as a function of the standard deviation and the correlation length of the randomness. We find that, in most of the parameter space, the compositional randomness in an HEA gives rise to an intrinsic strength that far exceeds that of any of the pure metals from which the HEA is composed.
+              A stochastic Peierls-Nabarro (PN) model is proposed to understand how random site occupancy affects intrinsic strength. The model predicts the intrinsic strength of HEAs as a function of the standard deviation and the correlation length of the randomness. We find that, in most of the parameter space, the compositional randomness in an HEA gives rise to an intrinsic strength that far exceeds that of any of the pure metals from which the HEA is composed. <a href="/publication/19_The_effect_of_randomness_on_the_strength_of_HEAs.pdf" download style="color:#C0165F;text-decoration:none">[paper]</a>
           </p>
         </div>
       </div>
@@ -168,15 +129,21 @@ includeHTML();
 
   </div>
 
-  <!-- Pagination -->
   <div class="w3-center w3-padding">
+    <div class="w3-bar">
+      <a class="w3-button w3-hover-black" href="#">Explore more</a>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <!--<div class="w3-center w3-padding">
     <div class="w3-bar">
       <a class="w3-button w3-black" href="#">1</a>
       <a class="w3-button w3-hover-black" href="#">2</a>
       <a class="w3-button w3-hover-black" href="#">3</a>
       <a class="w3-button w3-hover-black" href="#">4</a>
     </div>
-  </div>
+</div>-->
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l1">
@@ -194,8 +161,13 @@ includeHTML();
 
 
 
-<!-- END MAIN -->
 </div>
+<!-- END MAIN -->
+
+
+<script>
+includeHTML();
+</script>
 
 <script>
 // Script for side navigation
